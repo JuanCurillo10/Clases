@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="txtDescripcion" type="text" name="descripcion">
+    <input id="txtEstado" type="text" name="estado">
+    <label id="lblEstado"></label>
+
+    <script>
+        var nombre = prompt("Ingrese su nombre:");
+        alert('Hola ' + nombre);
+
+        let mensaje = 'Bienvenido ' + nombre;
+        console.log(mensaje);
+
+        document.getElementById("txtDescripcion").value = mensaje;
+
+        var el = document.getElementById("txtDescripcion"); 
+        el.style.color = "red"; 
+        el.style.fontSize = "25px"; 
+        el.style.backgroundColor = "#FFFF00";
+
+        var edad = prompt("Ingrese su edad:")
+
+        if(edad >= 18){
+            document.getElementById("txtEstado").value = 'Es mayor de edad.';
+            document.getElementById("lblEstado").innerHTML = 'Es mayor de edad.';
+            document.getElementById("lblEstado").style.color = "blue"; 
+        }
+        else{
+            document.getElementById("txtEstado").value = 'Es menor de edad.';
+            document.getElementById("lblEstado").innerHTML = 'Es menor de edad.';
+            document.getElementById("lblEstado").style.color = "red"; 
+        }
+    </script>
+</body>
+</html>
